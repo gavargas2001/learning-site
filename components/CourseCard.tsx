@@ -5,13 +5,16 @@ interface CourseCardProps {
   category: string;
   title: string;
   author: string;
+  id: number;
+  activeMenu: number;
+  setActiveMenu: (id: number) => void;
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ thumbnail, category, title, author }) => {
-  const [showMenu, setShowMenu] = useState(false);
+const CourseCard: React.FC<CourseCardProps> = ({ thumbnail, category, title, author, id, activeMenu, setActiveMenu }) => {
+  const showMenu = activeMenu === id;
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu);
+    setActiveMenu(showMenu ? -1 : id);
   };
 
   return (
@@ -28,7 +31,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ thumbnail, category, title, aut
         <div className="relative">
           <button onClick={toggleMenu} className="p-2 rounded-full hover:bg-gray-200 transition-colors duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6 text-gray-500">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16" />
             </svg>
           </button>
           {showMenu && (

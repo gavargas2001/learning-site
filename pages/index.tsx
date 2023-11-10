@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { useState } from 'react';
 import CourseCard from '../components/CourseCard';
 
 const courses = [
@@ -18,10 +18,12 @@ const courses = [
 ];
 
 export default function Home() {
+  const [activeMenu, setActiveMenu] = useState(-1);
+
   return (
     <main className="flex flex-col items-center justify-center p-24 space-y-6">
       {courses.map((course, index) => (
-        <CourseCard key={index} {...course} />
+        <CourseCard key={index} {...course} id={index} activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
       ))}
     </main>
   );

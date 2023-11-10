@@ -1,13 +1,28 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Image from 'next/image';
+import CourseCard from '../components/CourseCard';
 
-const inter = Inter({ subsets: ['latin'] })
+const courses = [
+  {
+    thumbnail: 'https://via.placeholder.com/150',
+    category: 'Web Development',
+    title: 'Learn React.js',
+    author: 'John Doe',
+  },
+  {
+    thumbnail: 'https://via.placeholder.com/150',
+    category: 'Data Science',
+    title: 'Introduction to Python',
+    author: 'Jane Doe',
+  },
+  // Add more courses as needed
+];
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
+    <main className="flex flex-col items-center justify-center p-24 space-y-6">
+      {courses.map((course, index) => (
+        <CourseCard key={index} {...course} />
+      ))}
     </main>
-  )
+  );
 }

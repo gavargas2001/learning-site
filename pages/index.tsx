@@ -3,9 +3,9 @@ import CourseCard from '../components/CourseCard';
 
 const courses = [
   {
-    thumbnail: 'https://via.placeholder.com/150',
-    category: 'Web Development',
-    title: 'Learn React.js',
+    thumbnail: '../public/images/leadership.jpg',
+    category: 'Leadership',
+    title: 'Team Leadership',
     author: 'John Doe',
     rating: 4.5,
   },
@@ -27,14 +27,14 @@ const courses = [
     thumbnail: 'https://via.placeholder.com/150',
     category: 'Web Development',
     title: 'Advanced CSS and Sass',
-    author: 'Bob Johnson',
+    author: 'John Doe',
     rating: 3.9,
   },
   {
     thumbnail: 'https://via.placeholder.com/150',
     category: 'Mobile Development',
     title: 'Mastering Swift and iOS',
-    author: 'Charlie Brown',
+    author: 'Alice Smith',
     rating: 3.5,
   },
 ];

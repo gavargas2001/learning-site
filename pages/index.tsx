@@ -16,7 +16,27 @@ const courses = [
     author: 'Jane Doe',
     rating: 4.0,
   },
-  // Add more courses as needed
+  {
+    thumbnail: 'https://via.placeholder.com/150',
+    category: 'Machine Learning',
+    title: 'Deep Learning with TensorFlow',
+    author: 'Alice Smith',
+    rating: 3.7,
+  },
+  {
+    thumbnail: 'https://via.placeholder.com/150',
+    category: 'Web Development',
+    title: 'Advanced CSS and Sass',
+    author: 'Bob Johnson',
+    rating: 3.9,
+  },
+  {
+    thumbnail: 'https://via.placeholder.com/150',
+    category: 'Mobile Development',
+    title: 'Mastering Swift and iOS',
+    author: 'Charlie Brown',
+    rating: 3.5,
+  },
 ];
 
 export default function Home() {
